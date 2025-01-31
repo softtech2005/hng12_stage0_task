@@ -1,5 +1,5 @@
 from flask import Flask, jsonify
-from datetime import datetime
+from datetime import datetime, timezone
 import pytz
 from flask_cors import CORS
 
@@ -8,13 +8,13 @@ CORS(app)
 @app.route("/", methods=["Get"])
 def get_info():
     email = "ebenezerboluwatife14@gmail.com"
-    github_url ="https://github.com/softtech2005/hng12_stage0_task.git"
+    github_url ="https://github.com/softtech2005/hng12_stage0_task"
 
     current_datetime = datetime.now(pytz.utc).isoformat()
 
     response ={
         "email" : email,
-        "current_datetime" : current_datetime,
+        "current_datetime" : datetime.now(timezone.utc).isoformat(timespec="seconds") + "Z",
         "github_url" : github_url
     }
 
