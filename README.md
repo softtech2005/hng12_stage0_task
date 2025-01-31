@@ -2,6 +2,9 @@
 
 This project is a public API developed for HNG12 Stage 0. It returns basic information in JSON format.
 
+## Hire Python Developers
+If you're looking for skilled Python developers, visit [hng.tech](https://hng.tech/hire/python-developers).
+
 ## Features
 - Returns email, current datetime, and GitHub repository URL.
 - Handles CORS requests.

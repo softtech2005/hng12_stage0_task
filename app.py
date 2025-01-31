@@ -14,7 +14,7 @@ def get_info():
 
     response ={
         "email" : email,
-        "current_datetime" : datetime.now(timezone.utc).isoformat(timespec="seconds") + "Z",
+        "current_datetime" : datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
         "github_url" : github_url
     }
 
